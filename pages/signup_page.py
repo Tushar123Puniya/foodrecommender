@@ -43,7 +43,9 @@ def main():
             st.error('Password mismatch')
         else:
             signup_user(username,email,password)
-
+            
+    st.page_link("main.py", label="Home", icon="🏠")   
+    
 if __name__ == '__main__':
     # Set page config to wide layout
     st.set_page_config(layout="wide")
