@@ -1,1 +1,4 @@
-
+streamlit
+streamlit_extras
+scikit-learn
+st-gsheets-connection
