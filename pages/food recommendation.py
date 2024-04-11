@@ -64,3 +64,5 @@ if submit_button:
     st.write("### Recommended Dishes:")
     for dish in recommended_dishes:
         st.write("- " + dish)
+        
+st.page_link("main.py", label="Home", icon="🏠")   
