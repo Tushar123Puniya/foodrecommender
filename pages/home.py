@@ -198,7 +198,7 @@ def home():
             st.error('Please fill in all required fields.')
         else:
             caloriy_need = calculate_calories(features)
-            st.write(f'Your daily caloriy need per meal is: {caloriy_need}')
+            st.write(f'Your daily caloriy need per meal is: {caloriy_need :.2f}')
     
     recommend_food = st.button('Recommend me food items')
     if recommend_food:
