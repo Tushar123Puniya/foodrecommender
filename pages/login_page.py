@@ -45,6 +45,7 @@ def login():
 
     if st.button('Login'):
         authenticate_user(username,password)
+    st.page_link("main.py", label="Home", icon="🏠")   
         
 def main():
     st.session_state['features']={}
