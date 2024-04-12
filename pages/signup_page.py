@@ -8,6 +8,8 @@ def signup_user(username,email, password):
     conn = sqlite3.connect('users.db')
     cursor = conn.cursor()
 
+    st.page_link("main.py", label="Home", icon="🏠")
+    
     cursor.execute("SELECT * FROM users WHERE username = ?", (username,))
     existing_user = cursor.fetchone()
     
