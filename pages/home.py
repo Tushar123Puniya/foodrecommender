@@ -23,10 +23,10 @@ def main():
     st.title("NutriAI Planner")
     
     # Create tabs for "About Us" and "Contact Us"
-    tabs = ["Home","About Us", "Contact Us"]
+    tabs = ["Nutrition Calculator","About Us", "Contact Us"]
     selected_tab = st.sidebar.radio("Navigation", tabs)
 
-    if selected_tab == "Home":
+    if selected_tab == "Nutrition Calculator":
         home()
     elif selected_tab == "Contact Us":
         contact_us()
