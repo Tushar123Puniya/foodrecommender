@@ -175,7 +175,7 @@ def home():
 
     activity_type = ['Sedentary (little or no exercise)','Lightly active (light exercise/sports 1-3 days a week)','Moderately active (moderate exercise/sports 3-5 days a week)','Very active (hard exercise/sports 6-7 days a week)','Extra active (very hard exercise/sports & physical job or training twice a day']
     id = activity_type.index(st.session_state['activity_type'])
-    activity = st.selectbox('What type of activity best alligned with your schedule?', activity_type,index= id)
+    activity = st.selectbox('What type of activity best alligned with your schedule:', activity_type,index= id)
     st.session_state['activity_type'] = activity
     
     mapping = {
