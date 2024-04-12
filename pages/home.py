@@ -20,7 +20,7 @@ def main():
         unsafe_allow_html=True
     )
 
-    st.title("Welcome to Our Restaurant")
+    st.title("NutriAI Planner")
     
     # Create tabs for "About Us" and "Contact Us"
     tabs = ["Home","About Us", "Contact Us"]
@@ -83,7 +83,7 @@ def home():
         """
     )            
     
-    st.subheader('Tell Us About Yourself')
+    st.subheader('Nutrition Calculator')
     
     conn = sqlite3.connect('users.db')
     cursor = conn.cursor()
