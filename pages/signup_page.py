@@ -29,14 +29,14 @@ def signup_user(username,email, password):
  
  
 def main():
-    st.title('Sign Up')
+    st.title('Register')
     st.session_state['features']={}
     username = st.text_input('Username')
     email = st.text_input('Email')
     password = st.text_input('Password', type='password')
     confirm_password = st.text_input('Confirm Password', type='password')
 
-    if st.button('Sign Up'):
+    if st.button('Register'):
         if not email.endswith('.com'):
             st.error('Please enter a valid email')
         elif password!=confirm_password:
