@@ -197,7 +197,7 @@ def home():
             }
     
     st.session_state['features']=features
-    calcuate_button = st.button('Calculate my caloriy need')
+    calcuate_button = st.button('Calculate my calorie need')
     
     if calcuate_button:
         if not name or not Age or not Height or not Weight or not gender:
