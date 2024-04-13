@@ -23,16 +23,19 @@ def main():
     st.title("Welcome to Our Recommender")
     
     # Create tabs for "About Us" and "Meal Recommendation"
-    tabs = ["Nutrition Calculator","Meal recommendation"]
+    tabs = ["Nutrition Calculator","Meal recommendation","About Us"]
     selected_tab = st.sidebar.radio("Navigation", tabs)
 
-    if selected_tab == "Nutrition Calculator":
-        home()
-    else:
+    if selected_tab=="About Us":
+        switch_page('aboutus')
+    elif selected_tab=='Meal recommendation':
         if st.session_state['given name']:
                 switch_page('food recommendation')
         else:
             st.error('!Please fill information of home page first',icon="🚨")
+    else:
+        home()
+        
 def about_us():
     st.write(
         """

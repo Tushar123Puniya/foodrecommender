@@ -52,10 +52,13 @@ def update():
 # Add CSS for positioning the logout button
 import streamlit as st
 
-tabs = ["Meal recommendation","Nutrition Calculator"]
+tabs = ["Meal recommendation","Nutrition Calculator","About Us"]
 selected_tab = st.sidebar.radio("Navigation", tabs)
+
 if selected_tab == "Nutrition Calculator":
     switch_page('home') 
+elif selected_tab == "About Us":
+    switch_page('aboutus')
     
 st.subheader("Tell us something more") 
 taste_preference_type = ['Not Selected','sweet','sour','salty','bitter','savory']
