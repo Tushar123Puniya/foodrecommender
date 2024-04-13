@@ -7,7 +7,7 @@ def signup_user(username,email, password):
     # Connect to the SQLite database
     conn = sqlite3.connect('users.db')
     cursor = conn.cursor()
-    
+
     cursor.execute("SELECT * FROM users WHERE username = ?", (username,))
     existing_user = cursor.fetchone()
     
@@ -20,6 +20,7 @@ def signup_user(username,email, password):
         st.session_state['email'] = email
         st.session_state['password'] = password
         st.session_state['new user'] = True
+        st.session_state['given name'] = False
         st.success("Sign up successful!")
         switch_page('home')
         
@@ -29,23 +30,23 @@ def signup_user(username,email, password):
  
  
 def main():
-    st.title('Register')
+    st.title('Sign Up')
     st.session_state['features']={}
     username = st.text_input('Username')
     email = st.text_input('Email')
     password = st.text_input('Password', type='password')
     confirm_password = st.text_input('Confirm Password', type='password')
 
-    if st.button('Register'):
+    if st.button('Sign Up'):
         if not email.endswith('.com'):
             st.error('Please enter a valid email')
         elif password!=confirm_password:
             st.error('Password mismatch')
         else:
             signup_user(username,email,password)
-            
-    st.page_link("main.py", label="Home", icon="🏠")   
     
+    st.page_link("main.py", label="Home", icon="🏠")   
+
 if __name__ == '__main__':
     # Set page config to wide layout
     st.set_page_config(layout="wide")

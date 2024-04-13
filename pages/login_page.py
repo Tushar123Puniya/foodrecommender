@@ -2,7 +2,12 @@ from streamlit_extras.switch_page_button import switch_page
 import streamlit as st
 import sqlite3
 from pages.home import main as home_main
+from streamlit_extras.switch_page_button import switch_page
+import webbrowser
 
+def open_url(url):
+    webbrowser.open_new_tab(url)
+    
 def authenticate_user(username, password):
     # Connect to the SQLite database
     conn = sqlite3.connect('users.db')
@@ -27,6 +32,7 @@ def authenticate_user(username, password):
             st.session_state['email'] = var[0]
             st.session_state['password'] = password
             st.session_state['new user'] = False
+            st.session_state['given name'] = True
             switch_page('home')
         else:
             st.error("Incorrect password. Authentication failed.")
@@ -45,8 +51,9 @@ def login():
 
     if st.button('Login'):
         authenticate_user(username,password)
-    st.page_link("main.py", label="Home", icon="🏠")   
         
+    st.page_link("main.py", label="Home", icon="🏠")   
+     
 def main():
     st.session_state['features']={}
     login()
