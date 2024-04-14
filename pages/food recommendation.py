@@ -26,7 +26,7 @@ def insert():
     }
 
     # Write SQL INSERT statement
-    insert_query = """INSERT INTO users 
+    insert_query = """INSERT OR IGNORE users 
                         (email,username, password, name, age, weight, height, gender, activity_type, goal, ethnicity, taste_preference, disease, location) 
                     VALUES 
                         (:email, :username, :password, :name, :age, :weight, :height, :gender, :activity_type, :goal, :ethnicity, :taste_preference, :disease, :location)"""
