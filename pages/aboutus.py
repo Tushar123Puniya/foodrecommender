@@ -1,7 +1,7 @@
 import streamlit as st
 from streamlit_extras.switch_page_button import switch_page
 
-st.title("Welcome to Our Recommender")
+st.title("Welcome to NutiAI Planner")
 
 tabs = ["About Us","Nutrition Calculator","Meal recommendation"]
 selected_tab = st.sidebar.radio("Navigation", tabs)
