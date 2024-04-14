@@ -72,12 +72,8 @@ def home():
         st.session_state['name'] = ''
         
     name = st.text_input("Enter Your Name:", st.session_state['name'])
-
-    #Name validation
-    if name.isalpha():
-        st.session_state['name'] = name
-    else:
-        st.error('Please enter a valid name with characters.')
+    st.session_state['name'] = name
+    
     
     if not st.session_state['new user']:
         email = st.session_state['email']
