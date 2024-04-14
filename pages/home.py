@@ -175,6 +175,8 @@ def home():
     if calcuate_button:
         if not name or not Age or not Height or not Weight or not gender:
             st.error('Please fill in all required fields.')
+        elif not name.isalpha():
+            st.error('Please enter a valid name with characters.')
         else:
             caloriy_need = calculate_calories(features)
             st.write(f'Your daily caloriy need per meal is: {caloriy_need :.2f}')
