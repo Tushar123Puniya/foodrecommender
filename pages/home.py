@@ -124,26 +124,26 @@ def home():
     
     gender_type = ['Male', 'Female']
     id = gender_type.index(st.session_state['gender'])
-    gender = st.selectbox('Please select your gender?:', gender_type,index=id )
+    gender = st.selectbox('Please select your gender:', gender_type,index=id )
     st.session_state['Gender'] = gender
     
     goal_type = ['Gain','Lose','Maintain']
     id = goal_type.index(st.session_state['goal'])
-    goal = st.selectbox('What type of specific goal you have in mind about gaining, maintaining or losing weight?:', goal_type,index=id)
+    goal = st.selectbox('What type of specific goal you have in mind about gaining, maintaining or losing weight:', goal_type,index=id)
     st.session_state['goal'] = goal
     
-    Age = st.slider('Select your age(in years)', min_value=15, max_value=75, value=st.session_state['age'], step=1)
+    Age = st.slider('Select your age (in years):', min_value=15, max_value=75, value=st.session_state['age'], step=1)
     st.session_state['age'] = Age
     
-    Weight = st.slider("Select your Weight(in kg):", min_value=45, max_value=109, value=st.session_state['weight'], step=1)
+    Weight = st.slider("Select your Weight (in kg):", min_value=45, max_value=109, value=st.session_state['weight'], step=1)
     st.session_state['weight'] = Weight
     
-    Height = st.slider("Select your Height(in cm):", min_value=160, max_value=191, value=st.session_state['height'], step=1)
+    Height = st.slider("Select your Height (in cm):", min_value=160, max_value=191, value=st.session_state['height'], step=1)
     st.session_state['height'] = Height
 
     activity_type = ['Sedentary (little or no exercise)','Lightly active (light exercise/sports 1-3 days a week)','Moderately active (moderate exercise/sports 3-5 days a week)','Very active (hard exercise/sports 6-7 days a week)','Extra active (very hard exercise/sports & physical job or training twice a day']
     id = activity_type.index(st.session_state['activity_type'])
-    activity = st.selectbox('What type of activity best alligned with your schedule?', activity_type,index= id)
+    activity = st.selectbox('What type of activity best alligned with your schedule:', activity_type,index= id)
     st.session_state['activity_type'] = activity
     
     mapping = {
@@ -165,7 +165,7 @@ def home():
             }
     
     st.session_state['features']=features
-    calcuate_button = st.button('Calculate my caloriy need')
+    calcuate_button = st.button('Calculate my calorie need')
     
     if calcuate_button:
         if not name or not Age or not Height or not Weight or not gender:
