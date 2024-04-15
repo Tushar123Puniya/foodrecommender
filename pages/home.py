@@ -29,7 +29,7 @@ def main():
     if selected_tab=="About Us":
         switch_page('aboutus')
     elif selected_tab=="My Account":
-        account()
+        switch_page('account')
     elif selected_tab=='Meal recommendation':
         if st.session_state['given name']:
                 switch_page('food recommendation')
