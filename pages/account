@@ -3,7 +3,7 @@ from streamlit_extras.switch_page_button import switch_page
 
 st.title("Welcome to NutiAI Planner")
 
-tabs = ["About Us","Nutrition Calculator","Meal recommendation"]
+tabs = ["About Us","Nutrition Calculator","Meal recommendation","My Account"]
 selected_tab = st.sidebar.radio("Navigation", tabs)
 if selected_tab == "Nutrition Calculator":
     switch_page('home')
