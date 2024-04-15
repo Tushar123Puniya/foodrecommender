@@ -20,4 +20,5 @@ cursor.execute("SELECT name FROM users WHERE email=?", (email,))
 var = cursor.fetchone()
 st.session_state['name'] = var[0]
 
-
+name = st.text_input("Enter Your Name:", st.session_state['name'])
+st.session_state['name'] = name
