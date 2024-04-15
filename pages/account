@@ -15,8 +15,9 @@ elif selected_tab=="Meal recommendation":
 conn = sqlite3.connect('users.db')
 cursor = conn.cursor()
 
-if not st.session_state['new user']:
-        username = st.session_state['username']
-        cursor.execute("SELECT name FROM users WHERE email=?", (email,))
-        var = cursor.fetchone()
-        st.session_state['name'] = var[0]
+username = st.session_state['username']
+cursor.execute("SELECT name FROM users WHERE email=?", (email,))
+var = cursor.fetchone()
+st.session_state['name'] = var[0]
+
+
