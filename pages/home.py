@@ -29,12 +29,12 @@ def main():
     if selected_tab=="About Us":
         switch_page('aboutus')
     elif selected_tab=="My Account":
-        switch_page('account')
+        switch_page('myaccount')
     elif selected_tab=='Meal recommendation':
         if st.session_state['given name']:
                 switch_page('food recommendation')
         else:
-            st.error('!Please fill information of home page first',icon="🚨")
+            st.error('!Please fill information of nutri calculator page first',icon="🚨")
     else:
         home()
         
