@@ -7,6 +7,8 @@ tabs = ["About Us","Nutrition Calculator","Meal recommendation","My Account"]
 selected_tab = st.sidebar.radio("Navigation", tabs)
 if selected_tab == "Nutrition Calculator":
     switch_page('home')
+elif selected_tab=="My Account":
+    switch_page('account')
 elif selected_tab=="Meal recommendation":
     switch_page('food recommendation')
 
