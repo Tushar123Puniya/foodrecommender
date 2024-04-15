@@ -23,11 +23,13 @@ def main():
     st.title("NutriAI Planner")
     
     # Create tabs for "About Us" and "Meal Recommendation"
-    tabs = ["Nutrition Calculator","Meal recommendation","About Us"]
+    tabs = ["Nutrition Calculator","Meal recommendation","About Us","My Account"]
     selected_tab = st.sidebar.radio("Navigation", tabs)
 
     if selected_tab=="About Us":
         switch_page('aboutus')
+    elif selected_tab=="My Account":
+        account()
     elif selected_tab=='Meal recommendation':
         if st.session_state['given name']:
                 switch_page('food recommendation')
@@ -49,7 +51,11 @@ def about_us():
         Embark on this journey to a healthier and happier lifestyle with NutriAI Planner.
         """
     )
-  
+
+def account():
+    st.title("My Account")
+
+    
 def home():
     st.write(
         """
