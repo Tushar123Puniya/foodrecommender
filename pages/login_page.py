@@ -1,7 +1,6 @@
 from streamlit_extras.switch_page_button import switch_page
 import streamlit as st
 import sqlite3
-from pages.home import main as home_main
 from streamlit_extras.switch_page_button import switch_page
 import webbrowser
 
