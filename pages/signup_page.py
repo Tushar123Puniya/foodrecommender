@@ -46,9 +46,12 @@ def insert(mail):
     cursor.close()
     conn.close()
 # Validation function
-def validate_inputs(existing_user,existing_mail,email, password, confirm_password):
+def validate_inputs(username,existing_user,existing_mail,email, password, confirm_password):
     errors = []
 
+    if not username:
+        errors.append('Please fill usename field')
+    
     if existing_user or existing_mail:
         if existing_mail:
             errors.append('Email already registered')
@@ -109,7 +112,7 @@ def main():
     conn.close()
     
     if st.button('Sign Up'):
-        errors = validate_inputs(existing_user,existing_mail, email,password,confirm_password)
+        errors = validate_inputs(username,existing_user,existing_mail, email,password,confirm_password)
         if errors:
             for error in errors:
                 st.error(error)

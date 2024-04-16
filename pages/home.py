@@ -13,7 +13,7 @@ def main():
     st.title("NutriAI Planner")
     
     # Create tabs for "About Us" and "Meal Recommendation"
-    tabs = ["Nutrition Calculator","Meal recommendation","About Us","My Account"]
+    tabs = ["Nutrition Calculator","Meal recommendation","About Us","My Account",'Logout']
     selected_tab = st.sidebar.radio("Navigation", tabs)
 
     if selected_tab=="About Us":
@@ -25,6 +25,8 @@ def main():
                 switch_page('food recommendation')
         else:
             st.error('!Please fill information of nutri calculator page first',icon="🚨")
+    elif selected_tab=='Logout':
+        switch_page('logout_page')
     else:
         home()
         
