@@ -59,9 +59,9 @@ username = st.session_state['username']
 st.title("Update your profile information")
 
 # Input fields for user data
-name = st.text_input("Name")
-newusername = st.text_input("Username")
-newemail = st.text_input("Email")
+name = st.text_input("Name",placeholder=st.session_state['name'])
+newusername = st.text_input("Username",placeholder=st.session_state['username'])
+newemail = st.text_input("Email",placeholder=st.session_state['email'])
 
 old_password = st.text_input("Old Password", type="password")
 new_password = st.text_input("New Password", type="password")
