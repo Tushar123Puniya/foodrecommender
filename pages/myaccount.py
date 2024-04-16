@@ -63,11 +63,11 @@ name = st.text_input("Name")
 newusername = st.text_input("Username")
 newemail = st.text_input("Email")
 
+old_password = st.text_input("Old Password", type="password")
 new_password = st.text_input("New Password", type="password")
 confirm_password = st.text_input("Confirm Password", type="password")
 existing_username=False
 existing_mail=False
-old_password = st.text_input("Old Password", type="password")
 cursor.execute("SELECT password FROM users WHERE email=?", (email,))
 var = cursor.fetchone()
 password = var[0]
