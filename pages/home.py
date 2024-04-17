@@ -112,10 +112,10 @@ def home():
     Age = st.slider('Select your age (in years):', min_value=15, max_value=75, value=st.session_state['age'], step=1)
     st.session_state['age'] = Age
     
-    Weight = st.slider("Select your Weight (in kg):", min_value=45, max_value=109, value=st.session_state['weight'], step=1)
+    Weight = st.slider("Select your Weight (in kg):", min_value=5, max_value=200, value=st.session_state['weight'], step=1)
     st.session_state['weight'] = Weight
     
-    Height = st.slider("Select your Height (in cm):", min_value=160, max_value=191, value=st.session_state['height'], step=1)
+    Height = st.slider("Select your Height (in cm):", min_value=120, max_value=200, value=st.session_state['height'], step=1)
     st.session_state['height'] = Height
 
     activity_type = ['Sedentary (little or no exercise)','Lightly active (light exercise/sports 1-3 days a week)','Moderately active (moderate exercise/sports 3-5 days a week)','Very active (hard exercise/sports 6-7 days a week)','Extra active (very hard exercise/sports & physical job or training twice a day']
