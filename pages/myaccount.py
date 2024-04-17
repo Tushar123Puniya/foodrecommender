@@ -56,7 +56,7 @@ cursor = conn.cursor()
 email = st.session_state['email']
 username = st.session_state['username']
 # Streamlit app layout
-st.title("Update your profile information")
+st.title("My Profile")
 
 # Input fields for user data
 name = st.text_input("Name",placeholder=st.session_state['name'])
